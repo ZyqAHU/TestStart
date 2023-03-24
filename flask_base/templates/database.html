@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+  <script src="static/assets/js/echarts.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>徽州商人数据可视化</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="/index"><span>徽州商人数据可视化</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="temp.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/index">首页<i class="la la-angle-down"></i></a></li>
+          <li><a href="/history">历史进程</a></li>
+          <li><a href="/men">代表人物</a></li>
+          <li><a href="/database">文献统计</a></li>
+          <li><a href="/wordcloud">词云展示</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+<!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>1874篇徽州商人相关文献统计</h2>
+          <p>应用Echarts实现</p>
+        </div>
+
+        <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+        <! --为Echarts准备一个DOM -->
+        <div id="main" style="width: 1000px;height:400px;">
+
+        </div>
+
+
+      </div>
+    </section><!-- End Counts Section -->
+
+      </div>
+    </section>
+  <!-- End Our Team Section -->
+
+  <!-- ======= Our Team Section ======= -->
+    <section id="team2" class="team">
+      <div class="container">
+
+
+        <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+        <! --为Echarts准备一个DOM -->
+        <div id="main2" style="width: 1100px;height:750px;">
+
+        </div>
+
+
+      </div>
+    </section><!-- End Counts Section -->
+
+      </div>
+    </section>
+  <!-- End Our Team Section -->
+
+  <!-- ======= Our Team Section ======= -->
+    <section id="team3" class="team">
+      <div class="container">
+
+        <section id="team4" class="team">
+      <div class="container">
+
+
+        <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+        <! --为Echarts准备一个DOM -->
+        <div id="main4" style="width: 1100px;height:750px;">
+
+        </div>
+
+
+      </div>
+    </section><!-- End Counts Section -->
+
+      </div>
+    </section>
+
+        <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+        <! --为Echarts准备一个DOM -->
+        <div id="main3" style="width: 1100px;height:750px;">
+
+        </div>
+
+
+      </div>
+    </section><!-- End Counts Section -->
+
+      </div>
+    </section><!-- End Our Team Section -->
+<script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+title: {
+    text: '发表年度趋势'
+  },
+tooltip: {
+    trigger: 'axis'
+  },
+legend: {
+    data: ['篇目数']
+  },
+  xAxis: {
+    name: '发表年份',
+    type: 'category',
+    data: ['1982', '1983', '1985', '1986', '1987', '1988', '1989','1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997','1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019','2020','2021']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      name: '篇目数',
+      data: [5,4,10,8,8,6,9,8,12,5,19,16,22,18,19,15,37,32,37,46,44,64,83,88,95,95,75,104,94,94,97,81,71,82,74,83,73,57,69],
+      type: 'line'
+    }
+  ]
+};
+
+option && myChart.setOption(option);
+
+        </script>
+
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main2'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '文献主题分布top20',
+                left: "center",
+                textStyle: {
+                    fontSize: 30,
+                    color: "rgba(116, 10, 10, 1)",
+                    fontWeight: "bolder"
+                }
+            },
+            tooltip: {},
+            legend: {
+                right: '55%',
+                top: '75%'
+
+            },
+
+            //右上角的功能小按钮
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: { readOnly: false },
+                    magicType: { type: ['line', 'bar'] },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                name: '主题',
+                nameTextStyle: {
+                    fontSize: 15
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '文献数',
+                nameTextStyle: {
+                    fontSize: 15
+                }
+            },
+            grid: {
+                left: '55%',
+                top: '15%'
+            },
+            //系列数据从 dataset 中取
+            dataset: {
+                source: [
+                    ['明清时期', 124],
+                    ['徽州商人', 66],
+                    ['明清徽州', 62],
+                    ['徽州文化', 59],
+                    ['徽州人', 44],
+                    ['徽州', 31],
+                    ['徽商', 29],
+                    ['徽州茶商', 27],
+                    ['明清徽商', 27],
+                    ['徽文化', 24],
+                    ['徽商文化', 22],
+                    ['比较研究', 19],
+                    ['徽州盐商', 19],
+                    ['徽州地区', 18],
+                    ['社会变迁', 18],
+                    ['研究综述', 18],
+                    ['徽州社会', 15],
+                    ['古徽州', 14],
+                    ['徽州民居', 14],
+                    ['徽州木雕', 13]
+                ]
+            },
+            series: [{
+                type: 'pie',
+                center: ['25%', '40%'],
+                radius: '50%',
+                // 数据从 dataset 中取，encode 中的数值是 dataset.source 的维度 index （即第几列）
+                encode: { itemName: 0, value: 1 }
+            },
+            {
+                type: 'bar',
+                encode: { x: 0, y: 1 }
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
+    </script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main3'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '学科分布top20',
+                left: "center",
+                textStyle: {
+                    fontSize: 30,
+                    color: "rgba(116, 10, 10, 1)",
+                    fontWeight: "bolder"
+                }
+            },
+            tooltip: {},
+            legend: {
+                right: '55%',
+                top: '75%'
+
+            },
+
+            //右上角的功能小按钮
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: { readOnly: false },
+                    magicType: { type: ['line', 'bar'] },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                name: '学科',
+                nameTextStyle: {
+                    fontSize: 15
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '文献数',
+                nameTextStyle: {
+                    fontSize: 15
+                }
+            },
+            grid: {
+                left: '55%',
+                top: '15%'
+            },
+            //系列数据从 dataset 中取
+            dataset: {
+                source: [
+                    ['中国古代史', 443],
+                    ['企业经济', 208],
+                    ['贸易经济', 198],
+                    ['中国民族与地方史志', 165],
+                    ['中国文学', 161],
+                    ['文化', 116],
+                    ['美术书法雕塑与摄影', 88],
+                    ['建筑科学与工程', 78],
+                    ['地理', 76],
+                    ['旅游', 64],
+                    ['中国近现代史', 55],
+                    ['中国通史', 43],
+                    ['经济体制改革', 42],
+                    ['人物传记', 38],
+                    ['考古', 36],
+                    ['戏剧电影与电视艺术', 34],
+                    ['工业经济', 30],
+                    ['农业经济', 26],
+                    ['中国政治与国际政治', 25],
+                    ['伦理学', 25]
+                ]
+            },
+            series: [{
+                type: 'pie',
+                center: ['25%', '40%'],
+                radius: '50%',
+                // 数据从 dataset 中取，encode 中的数值是 dataset.source 的维度 index （即第几列）
+                encode: { itemName: 0, value: 1 }
+            },
+            {
+                type: 'bar',
+                encode: { x: 0, y: 1 }
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
+    </script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main4'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '研究机构分布top20',
+                left: "center",
+                textStyle: {
+                    fontSize: 30,
+                    color: "rgba(116, 10, 10, 1)",
+                    fontWeight: "bolder"
+                }
+            },
+            tooltip: {},
+            legend: {
+                right: '55%',
+                top: '75%'
+
+            },
+
+            //右上角的功能小按钮
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: { readOnly: false },
+                    magicType: { type: ['line', 'bar'] },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                name: '研究机构',
+                nameTextStyle: {
+                    fontSize: 15
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '文献数',
+                nameTextStyle: {
+                    fontSize: 15
+                }
+            },
+            grid: {
+                left: '55%',
+                top: '15%'
+            },
+            //系列数据从 dataset 中取
+            dataset: {
+                source: [
+                    ['安徽师范大学', 200],
+                    ['安徽大学', 175],
+                    ['复旦大学', 62],
+                    ['黄山学院', 45],
+                    ['上海师范大学', 40],
+                    ['苏州大学', 25],
+                    ['南京大学', 25],
+                    ['安徽财经大学', 24],
+                    ['华中师范大学', 17],
+                    ['南开大学', 14],
+                    ['华东师范大学', 13],
+                    ['中国人民大学', 12],
+                    ['厦门大学', 11],
+                    ['安徽商贸职业技术学院', 10],
+                    ['东北师范大学', 10],
+                    ['山西大学', 10],
+                    ['安徽农业大学', 9],
+                    ['淮北师范大学', 9],
+                    ['浙江大学', 9],
+                    ['安徽工程大学', 9]
+                ]
+            },
+            series: [{
+                type: 'pie',
+                center: ['25%', '40%'],
+                radius: '50%',
+                // 数据从 dataset 中取，encode 中的数值是 dataset.source 的维度 index （即第几列）
+                encode: { itemName: 0, value: 1 }
+            },
+            {
+                type: 'bar',
+                encode: { x: 0, y: 1 }
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

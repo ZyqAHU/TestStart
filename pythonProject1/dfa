@@ -1,0 +1,21 @@
+digraph {
+	node [shape=none]
+	""
+	node [shape=doublecircle]
+	s1s3
+	"" -> s1s3
+	node [shape=circle]
+	s2
+	s1s3 -> s2 [label=0]
+	node [shape=circle]
+	"ϕ"
+	"ϕ" -> "ϕ" [label=0]
+	"ϕ" -> "ϕ" [label=1]
+	s1s3 -> "ϕ" [label=1]
+	s2 -> "ϕ" [label=0]
+	node [shape=doublecircle]
+	s3
+	s2 -> s3 [label=1]
+	s3 -> "ϕ" [label=0]
+	s3 -> "ϕ" [label=1]
+}
